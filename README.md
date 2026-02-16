@@ -4,12 +4,13 @@
 
 Реализует базовые функции
 
--Create
--ReadMany
--ReadById
--Update
--Delete
--DeleteAll
+- Create
+- ReadMany
+- ReadById
+- Update
+- Delete
+- DeleteAll
 
 
 Это dev-версия. Не требует SSL-сертификатов, хранит ConnectionString в файле.
+
