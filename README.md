@@ -11,4 +11,5 @@
 -Delete
 -DeleteAll
 
+
 Это dev-версия. Не требует SSL-сертификатов, хранит ConnectionString в файле.
