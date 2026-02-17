@@ -19,6 +19,7 @@ namespace NetApp
         }
 
 
+        // Подключение данных о БД
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -56,3 +57,4 @@ namespace NetApp
     }
 
 }
+
