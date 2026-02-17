@@ -6,4 +6,6 @@ COPY . ./
 RUN dotnet restore
 
 # Ран
+EXPOSE 8080
+
 ENTRYPOINT ["dotnet", "run"]
