@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore; // импорт UseSqlServer
+using Microsoft.EntityFrameworkCore; // импорт UseNpgsql
 using NetApp.Contexts;
 using NetApp.Services;
 
@@ -21,8 +21,6 @@ namespace NetApp
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // options.UseSqlServer
-            // options.UseSqlite("Data Source=mydb.db")
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseNpgsql(
             Configuration.GetConnectionString("DefaultConnection")
@@ -42,7 +40,6 @@ namespace NetApp
         // Здесь будет предобработка Auth Middlew, Routing Middlew, ErrorHandl Middlew
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            // Если приложение в IDE, будут выводиться ошибки
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -57,4 +54,5 @@ namespace NetApp
         }
 
     }
+
 }
