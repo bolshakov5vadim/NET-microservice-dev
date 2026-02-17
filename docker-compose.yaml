@@ -3,6 +3,7 @@ services:
   net-app:
     build: ./NetApp
     ports: 
-      - "80:80"
+      - "8080:8080"
     restart: on-failure
+
 
